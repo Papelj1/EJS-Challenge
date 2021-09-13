@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p> <%= homeContent %> </p>
+<% composeArray.forEach(function(composeComplete) { %>
+    <h1> <%= composeComplete.title %>  </h1>
+    </p> <%= composeComplete.body.substring(0, 100) + "..."  %> <a href="/compose/<%=composeComplete.title%>">Read more</a></p>
+
+<% }); %>
+
+<%- include("partials/footer") -%>
